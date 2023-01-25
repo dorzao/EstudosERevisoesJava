@@ -19,27 +19,27 @@ public class Candidato {
 		System.out.println("Deseja cadastrar um candidato[s/n]? ");
 		String op = this.leia_nomes.nextLine();
 		
-		// Miniloop para entrada válida em caso de erro
+		// Miniloop para entrada válida
 		while(!op.equals("s") && !op.equals("n")) {
 			System.out.println("Opção inválida, digite somente s para sim ou n para não.");
 			op = this.leia_nomes.nextLine();
 		}
 		
-		// Saída para o caso do usuário não querer cadastrar nnguém
-		if (op.equals("n")){
+		// Iniciano switch case
+		switch (op) {
+		case "n":
 			System.out.println("Sem candidatura não há a necessidade da votação.");
-						
-		} else {
-			
+			break;
+		case "s":
 			// Iniciando o método cadastro
 			this.cadastro();
 			
 			// Iniciando o método de votação
 			this.votacao();
-						
+			break;
+				
 		}
 		
-		// Saída final do programa
 		System.out.println("Fim do programa");
 	}
 	
