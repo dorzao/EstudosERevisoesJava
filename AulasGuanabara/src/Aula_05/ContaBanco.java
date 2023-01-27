@@ -1,4 +1,4 @@
-package aulas_guanabara;
+package Aula_05;
 
 class ContaBanco {
 	

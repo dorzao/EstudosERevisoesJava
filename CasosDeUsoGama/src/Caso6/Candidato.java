@@ -1,3 +1,4 @@
+package Caso6;
 // importando bibliotecas necessárias.
 import java.util.ArrayList;
 import java.util.Scanner;

@@ -1,3 +1,4 @@
+package Caso6;
 /*
 6) Desenvolva um algoritmo para o seguinte estudo de caso:
 A empresa XYZ esta recrutando novos colaboradores e para isto requisitou a área e TI o desenvolvimento de um sistema que possibilite a entrada do nome do candidato, sua idade, escolaridade e que os recrutadores indiquem qual o candidato escolheram. 
