@@ -20,7 +20,7 @@ public class Aula_07_08 {
 		Luta luta = new Luta();
 		
 		// Simulando uma luta com sucesso
-		luta.marcarLuta(l[0], l[1]);
+		luta.marcarLuta(l[2], l[3]);
 		luta.lutar();
 		
 	}
