@@ -1,5 +1,3 @@
-# Estudos em Java
+# Sobre o repositório
 
-## Sobre
-
-Repositório demonstrando meus estudos e revisões diárias na linguagem java.
+Repositório que reflete meus estudos e revisões diárias na linguagem java.
