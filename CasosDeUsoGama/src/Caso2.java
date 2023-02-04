@@ -2,8 +2,8 @@
 	variáveis:
 	a) para o nome de uma agência de veículos;
 	b) o modelo do veiculo;
-	c) a cor do veículo;
-	•
+	c) a cor do veículo.
+	
 	Atribua valores as variáveis e faça a impressão no console
 	
 	Bootcamp Itaú / Gama Academy
