@@ -2,7 +2,7 @@ package Menus;
 
 import java.util.Scanner;
 
-import Familia.DBFamilias;
+import Familia.DeletarFamilia;
 import Familia.Familias;
 import Listas.ListarFamilia;
 import Listas.ListarMembros;

@@ -3,7 +3,7 @@ package Pessoa;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import Familia.DBFamilias;
+import Familia.DeletarFamilia;
 import Familia.Familia;
 import Familia.Familias;
 import Familia.SomarDependentes;

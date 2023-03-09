@@ -3,7 +3,7 @@ package Listas;
 import java.util.ArrayList;
 import java.util.function.Consumer;
 
-import Familia.DBFamilias;
+import Familia.DeletarFamilia;
 import Familia.Familia;
 import Familia.Familias;
 import Main.Main;

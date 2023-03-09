@@ -1,6 +1,7 @@
 package Menus;
 
 import Familia.AdicionarMembro;
+import Familia.DeletarFamilia;
 import Main.Main;
 
 public class MenuModificarFamilia extends Menu {
@@ -42,7 +43,7 @@ public class MenuModificarFamilia extends Menu {
 	}
 
 	public void opcao3 () {
-
+		new DeletarFamilia();
 	}
 
 	public void opcao4 () {
