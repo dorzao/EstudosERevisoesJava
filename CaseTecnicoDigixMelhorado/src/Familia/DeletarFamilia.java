@@ -14,15 +14,14 @@ public class DeletarFamilia {
 		String nis = new ValidadorDeNis().verificarNumerico(new Scanner(System.in).nextLine());
 		nis = new ValidadorDeNis().verificarTamanho(nis);
 		if (nis != null) {
-			int indice = 0;
 			for (Familia familia : Familias.familias) {
 				if (nis.equals(familia.getNis())) {
 					System.out.println("Removendo família "+familia.getApelido()+" do banco de dados!");
-					Familias.familias.remove(indice);
+					Familias.familias.set(Familias.familias.indexOf(familia), null);
 					Main.main(null);
 					break;
 				}
-				indice++;
+				
 			}
 		} 
 		System.out.println("NIS não encontrado!");

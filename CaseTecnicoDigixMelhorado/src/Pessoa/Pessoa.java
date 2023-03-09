@@ -20,7 +20,7 @@ public class Pessoa {
 		this.idade = idade;
 		this.salario = salario;
 	}
-	
+		
 	// Métodos getters e settters
 	public String getNome() {
 		return nome;
