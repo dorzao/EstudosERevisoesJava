@@ -1,15 +1,17 @@
 package Entidades;
 
+import java.util.ArrayList;
+
 public final class Familia {
 	private String apelido;
 	private String nis;
-	private int pontos, pontosDependentes, pontosRenda;
+	private int pontos, pontosDependentes, pontosRenda, numeroDeMembros, numeroDeDependentes;
 	private double renda;
-	private Membro[] membros;
-	private Dependente[] dependentes;
+	private ArrayList<Membro> membros;
+	private ArrayList<Dependente> dependentes;
 	
 	public Familia(String apelido, String nis, int pontos, int pontosDependentes, int pontosRenda, double renda,
-			Membro[] membros, Dependente[] dependentes) {
+			ArrayList<Membro> membros, ArrayList<Dependente> dependentes) {
 		super();
 		this.apelido = apelido;
 		this.nis = nis;
@@ -71,19 +73,19 @@ public final class Familia {
 		this.renda = renda;
 	}
 
-	public Membro[] getMembros() {
+	public ArrayList<Membro> getMembros() {
 		return membros;
 	}
 
-	public void setMembros(Membro[] membros) {
+	public void setMembros(ArrayList<Membro> membros) {
 		this.membros = membros;
 	}
 
-	public Dependente[] getDependentes() {
+	public ArrayList<Dependente> getDependentes() {
 		return dependentes;
 	}
 
-	public void setDependentes(Dependente[] dependentes) {
+	public void setDependentes(ArrayList<Dependente> dependentes) {
 		this.dependentes = dependentes;
 	}
 	
