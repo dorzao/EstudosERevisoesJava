@@ -1,0 +1,24 @@
+/*
+Pontos positivos:
+- Familia possui comportamentos
+- Criou o pontuador com regras em classes separadas
+- Usou interfaces para pontuações
+
+Pontos de melhoria para esta vaga:
+- Pontuador poderia saber sua pontuação ao invés de receber a quantidade de pontos como parâmetro
+- Pontuador e Criterio poderiam se tornar uma única classe, ficou redundante, tornando mais complexa a criação de novas regras
+- Poderia ter uma única interface para calcular regras sobre uma família
+- Critério de dependentes não é atendido, pois faltou validar a idade. Uma forma seria representando dependente como um objeto com sua data de nascimento em vez de um inteiro em Familia
+- CriterioDependentes e CriterioRenda ferem 'O' do SOLID, não sendo extensíveis para novas partes do critério
+- Familia fere 'O' do SOLID, a toda vez que precisarmos criar um novo critério, teriamos que adicionar ele no construtor 
+- Sobre clean code, poderia separar lógica mais longa passada como parâmetro em variáveis pra facilitar a leitura (EX: CriterioRenda - setPontuacao)
+  - Nome das classes poderia identificar melhor o que ela faz (EX: PontuadorParaAteTresDependentes em vez de PontuadorDependentes1)
+  - Vasto uso de comentários - o clean code sugere comentar apenas o necessário, para forçar que o código seja auto-explicativo
+- Entidade Familia cria e executa serviços, o que torna o código confuso, pois família não deveria ter a responsabilidade de se auto-avaliar - fere o S do SOLID
+- Poderiam haver testes automatizados
+- Poderia haver uma arquitetura para organizar o software em camadas (ex: onion ou clean architecture)
+
+Sugestões de leitura:
+- Orientação a Objetos e SOLID Para Ninjas - Maurício Aniche
+- Test-Driven Development: Teste e Design no Mundo Real - Mauricio Aniche
+*/
