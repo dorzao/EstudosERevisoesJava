@@ -1,13 +1,18 @@
 /*
+(Todos mantidos)
 Pontos positivos:
 - Familia possui comportamentos
 - Criou o pontuador com regras em classes separadas
 - Usou interfaces para pontuações
 
-Pontos de melhoria para esta vaga:
-- Pontuador poderia saber sua pontuação ao invés de receber a quantidade de pontos como parâmetro
+
+(Melhorando estes Pontos)
+Pontos de melhoria para este case:
+- Pontuador poderia saber sua pontuação ao invés de receber a quantidade de pontos como parâmetro (Corrigido)
+
 - Pontuador e Criterio poderiam se tornar uma única classe, ficou redundante, tornando mais complexa a criação de novas regras
-- Poderia ter uma única interface para calcular regras sobre uma família
+- Poderia ter uma única interface para calcular regras sobre uma família (Este e o acima foram corrigidos também)
+
 - Critério de dependentes não é atendido, pois faltou validar a idade. Uma forma seria representando dependente como um objeto com sua data de nascimento em vez de um inteiro em Familia
 - CriterioDependentes e CriterioRenda ferem 'O' do SOLID, não sendo extensíveis para novas partes do critério
 - Familia fere 'O' do SOLID, a toda vez que precisarmos criar um novo critério, teriamos que adicionar ele no construtor 
