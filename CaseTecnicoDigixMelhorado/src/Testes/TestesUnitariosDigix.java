@@ -40,10 +40,8 @@ class TestesUnitariosDigix {
 	void testePontuadorRendaDe901Ate1500() throws ParseException {
 		Familia f1 = new Familia("", "");
 		f1.setRenda(901);
-		f1.somarRenda();
 		new PontuadorGeral(f1);
-		final int obtido = f1.getPontosRenda();
-		assertEquals(3, obtido);
+		assertEquals(3, f1.getPontosRenda());
 		
 	}
 	
