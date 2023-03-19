@@ -2,25 +2,36 @@ package Entidades;
 
 import java.util.ArrayList;
 
+import CasosDeUso.ValidadorDeDependentes;
+
 public final class Familia {
 	private String apelido;
 	private String nis;
 	private int pontos, pontosDependentes, pontosRenda, numeroDeMembros, numeroDeDependentes;
 	private double renda;
-	private ArrayList<Membro> membros;
-	private ArrayList<Dependente> dependentes;
-	
-	public Familia(String apelido, String nis, int pontos, int pontosDependentes, int pontosRenda, double renda,
-			ArrayList<Membro> membros, ArrayList<Dependente> dependentes) {
+	private ArrayList<Membro> membros = new ArrayList<>();
+	private ArrayList dependentes = new ArrayList<>();
+
+	public Familia(String apelido, String nis) {
 		super();
 		this.apelido = apelido;
 		this.nis = nis;
-		this.pontos = pontos;
-		this.pontosDependentes = pontosDependentes;
-		this.pontosRenda = pontosRenda;
-		this.renda = renda;
-		this.membros = membros;
-		this.dependentes = dependentes;
+		this.somarRenda();
+	}
+
+	public void adicionarMembro(Membro membro) {
+		this.getMembros().add(membro);
+		System.out.println(membro.getNome()+" adicionado(a) à família "+this.getApelido()+". ");
+	}
+	
+	public void somarRenda() {
+		
+		for (Membro membro : this.getMembros()) {
+			
+			this.setRenda(this.getRenda() + membro.getSalario());
+			
+		}
+		
 	}
 
 	public String getApelido() {
@@ -81,17 +92,17 @@ public final class Familia {
 		this.membros = membros;
 	}
 
-	public ArrayList<Dependente> getDependentes() {
+	public ArrayList getDependentes() {
 		return dependentes;
 	}
 
-	public void setDependentes(ArrayList<Dependente> dependentes) {
+	public void setDependentes(ArrayList dependentes) {
 		this.dependentes = dependentes;
 	}
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 }

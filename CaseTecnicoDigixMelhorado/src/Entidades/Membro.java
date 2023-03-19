@@ -12,14 +12,17 @@ public class Membro {
 	private String cpf;
 	private int idade;
 	private static String dataNascimento;
+	private double salario;
 	
+	// polimorfismo de sobrecarga para finalidade de testes unitários.
 	public Membro () {}
 	
-	public Membro (String nome, String cpf, String dataNascimento) throws ParseException {
+	public Membro (String nome, String cpf, String dataNascimento, double salario) throws ParseException {
 		this.nome = nome;
 		this.cpf = cpf;
 		this.dataNascimento = dataNascimento;
 		this.idade = this.calculoIdade(dataNascimento);
+		this.salario = salario;
 	}
 	
 	
@@ -54,6 +57,14 @@ public class Membro {
 
 	public void setDataNascimento(String dataNascimento) {
 		this.dataNascimento = dataNascimento;
+	}
+
+	public double getSalario() {
+		return salario;
+	}
+
+	public void setSalario(double salario) {
+		this.salario = salario;
 	}
 
 	public static int calculoIdade(String dataNascimento) throws ParseException {
