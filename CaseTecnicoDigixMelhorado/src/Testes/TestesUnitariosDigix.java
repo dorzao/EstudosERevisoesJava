@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.util.Date;
 import org.junit.jupiter.api.Test;
 
+import CasosDeUso.PontuadorDependentes3OuMais;
 import CasosDeUso.PontuadorGeral;
 import CasosDeUso.ValidadorDeDependentes;
 import Entidades.Familia;
@@ -47,15 +48,12 @@ class TestesUnitariosDigix {
 	
 	@Test
 	void testePontuadorDeDependentes3OuMais() throws ParseException {
-		final int esperado = 3;
-		Familia f1 = new Familia("Pessoa Qualquer", "nis qualquer");
-		f1.adicionarMembro(new Membro("nome", "cpf", "11/11/2011", 899));
-		f1.adicionarMembro(new Membro("nome", "cpf", "11/11/2011", 899));
-		f1.adicionarMembro(new Membro("nome", "cpf", "11/11/2011", 899));
-		new ValidadorDeDependentes(f1);
-		new PontuadorGeral(f1);
-		final int obtido = f1.getPontosDependentes();
-		assertEquals(esperado, obtido);
+		Familia f1 = new Familia("", "");
+		f1.getDependentes().add(new Membro());
+		f1.getDependentes().add(new Membro());
+		f1.getDependentes().add(new Membro());
+		new PontuadorDependentes3OuMais().pontuar(f1);
+		assertEquals(3, f1.getPontosDependentes());
 		
 	}
 
