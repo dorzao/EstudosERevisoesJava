@@ -29,24 +29,21 @@ class TestesUnitariosDigix {
 	
 	@Test
 	void testePontuadorRendaAte900Retornando5() throws ParseException {
-		Familia f1 = new Familia("Pessoa Qualquer", "nis qualquer");
-		f1.adicionarMembro(new Membro("nome", "cpf", "11/11/2011", 899));
-		f1.somarRenda();
+		Familia f1 = new Familia("a", "a");
+		f1.setRenda(899);
 		new PontuadorGeral(f1);
-		final int obtido = f1.getPontosRenda();
-		assertEquals(5, obtido);
+		assertEquals(5, f1.getPontosRenda());
 		
 	}
 	
 	@Test
 	void testePontuadorRendaDe901Ate1500() throws ParseException {
-		final int esperado = 3;
-		Familia f1 = new Familia("Pessoa Qualquer", "nis qualquer");
-		f1.adicionarMembro(new Membro("nome", "cpf", "11/11/2011", 901));
+		Familia f1 = new Familia("", "");
+		f1.setRenda(901);
 		f1.somarRenda();
 		new PontuadorGeral(f1);
 		final int obtido = f1.getPontosRenda();
-		assertEquals(esperado, obtido);
+		assertEquals(3, obtido);
 		
 	}
 	
