@@ -16,7 +16,12 @@ public abstract class ListaDeFamilias {
 		int contador = 1;
 		for (var pontos : pontuacoes) {
 			System.out.println("====================");
-			System.out.println("Prioridade "+contador+": "+pontos+" pontos.");
+			if (contador < pontuacoes.length) {
+				System.out.print("Prioridade "+contador);
+			} else {
+				System.out.print("Sem Prioridade");
+			}
+			System.out.println(": "+pontos+" pontos.");
 			System.out.println("====================");
 			for (Familia familia : familias) {
 				if (familia.getPontos() == pontos) {
@@ -33,6 +38,7 @@ public abstract class ListaDeFamilias {
 		System.out.println("NIS: "+familia.getNis());
 		System.out.println("Membros: "+familia.getMembros().size());
 		System.out.println("Dependentes: "+familia.getDependentes().size());
+		System.out.println("Renda : R$ "+familia.getRenda());
 		System.out.println("Total de pontos: "+familia.getPontos());
 		System.out.println("====================");
 	}
