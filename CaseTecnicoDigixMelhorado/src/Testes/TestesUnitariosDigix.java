@@ -6,6 +6,7 @@ import java.util.Date;
 import org.junit.jupiter.api.Test;
 
 import CasosDeUso.PontuadorDependentes3OuMais;
+import CasosDeUso.PontuadorDependentesEntre1E2;
 import CasosDeUso.PontuadorGeral;
 import CasosDeUso.ValidadorDeDependentes;
 import Entidades.Familia;
@@ -55,6 +56,14 @@ class TestesUnitariosDigix {
 		new PontuadorDependentes3OuMais().pontuar(f1);
 		assertEquals(3, f1.getPontosDependentes());
 		
+	}
+	
+	@Test
+	void testePontuadorDeDependentesEntre1E2 () {
+		Familia f1 = new Familia("", "");
+		f1.getDependentes().add(new Membro());
+		new PontuadorDependentesEntre1E2().pontuar(f1); 
+		assertEquals(2, f1.getPontosDependentes());
 	}
 
 }
