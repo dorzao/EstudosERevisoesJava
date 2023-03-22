@@ -17,11 +17,11 @@ public class Membro {
 	// polimorfismo de sobrecarga para finalidade de testes unitários.
 	public Membro () {}
 	
-	public Membro (String nome, String cpf, String dataNascimento, double salario) throws ParseException {
+	public Membro (String nome, String cpf, String dataNascimento, double salario) {
 		this.nome = nome;
 		this.cpf = cpf;
 		this.dataNascimento = dataNascimento;
-		this.idade = this.calculoIdade(dataNascimento);
+		this.idade = calculoIdade(dataNascimento);
 		this.salario = salario;
 	}
 	
@@ -67,10 +67,15 @@ public class Membro {
 		this.salario = salario;
 	}
 
-	public static int calculoIdade(String dataNascimento) throws ParseException {
+	public static int calculoIdade(String dataNascimento) {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		Calendar dataDeAniversario = new GregorianCalendar();
-		dataDeAniversario.setTime(sdf.parse(dataNascimento));
+		try {
+			dataDeAniversario.setTime(sdf.parse(dataNascimento));
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		Calendar hoje = Calendar.getInstance();
 		int idadeProvisoria = hoje.get(Calendar.YEAR) - dataDeAniversario.get(Calendar.YEAR);
 		if (hoje.get(Calendar.DAY_OF_YEAR) < dataDeAniversario.get(Calendar.DAY_OF_YEAR)) {

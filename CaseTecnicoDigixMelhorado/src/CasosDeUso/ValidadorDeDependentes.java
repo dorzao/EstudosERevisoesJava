@@ -2,7 +2,6 @@ package CasosDeUso;
 
 import java.util.ArrayList;
 
-import Entidades.Dependente;
 import Entidades.Familia;
 import Entidades.Membro;
 

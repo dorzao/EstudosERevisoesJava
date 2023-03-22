@@ -14,14 +14,15 @@ Pontos de melhoria para este case:
 - Poderia ter uma única interface para calcular regras sobre uma família (Este e o acima foram corrigidos também)
 
 - Critério de dependentes não é atendido, pois faltou validar a idade. Uma forma seria representando dependente como um objeto com sua data de nascimento em vez de um inteiro em Familia
+(Agora tanto membros quanto dependentes são listas do objeto membro, e tem um validador de dependentes que enche a lista de dependentes conforme a idade do membro (idade do membro calculada conforme data de nascimento informada))
 - CriterioDependentes e CriterioRenda ferem 'O' do SOLID, não sendo extensíveis para novas partes do critério
-- Familia fere 'O' do SOLID, a toda vez que precisarmos criar um novo critério, teriamos que adicionar ele no construtor 
+- Familia fere 'O' do SOLID, a toda vez que precisarmos criar um novo critério, teriamos que adicionar ele no construtor (Agora qualquer critério estará na camada de caso de uso, enquanto família está na camada de entidades. Todos os critérios recebem família como parâmetro e família não precisa ser alterada cada vez que um novo critério surgir.)
 - Sobre clean code, poderia separar lógica mais longa passada como parâmetro em variáveis pra facilitar a leitura (EX: CriterioRenda - setPontuacao)
-  - Nome das classes poderia identificar melhor o que ela faz (EX: PontuadorParaAteTresDependentes em vez de PontuadorDependentes1)
-  - Vasto uso de comentários - o clean code sugere comentar apenas o necessário, para forçar que o código seja auto-explicativo
+  - Nome das classes poderia identificar melhor o que ela faz (EX: PontuadorParaAteTresDependentes em vez de PontuadorDependentes1) (Corrigido)
+  - Vasto uso de comentários - o clean code sugere comentar apenas o necessário, para forçar que o código seja auto-explicativo (Comentários reduzidos e melhor auto-explicação no nome das classes e métodos)
 - Entidade Familia cria e executa serviços, o que torna o código confuso, pois família não deveria ter a responsabilidade de se auto-avaliar - fere o S do SOLID
-- Poderiam haver testes automatizados
-- Poderia haver uma arquitetura para organizar o software em camadas (ex: onion ou clean architecture)
+- Poderiam haver testes automatizados (Agora tem alguns, praticamente todos com assertEquals mas, estão aí)
+- Poderia haver uma arquitetura para organizar o software em camadas (ex: onion ou clean architecture) (Separei em entidades, casos de uso e testes)
 
 Sugestões de leitura:
 - Orientação a Objetos e SOLID Para Ninjas - Maurício Aniche

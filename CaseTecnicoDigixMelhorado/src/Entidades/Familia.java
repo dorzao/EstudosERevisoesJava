@@ -1,10 +1,11 @@
 package Entidades;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import CasosDeUso.ValidadorDeDependentes;
 
-public final class Familia {
+public final class Familia implements Serializable{
 	private String apelido;
 	private String nis;
 	private int pontos, pontosDependentes, pontosRenda, numeroDeMembros, numeroDeDependentes;
