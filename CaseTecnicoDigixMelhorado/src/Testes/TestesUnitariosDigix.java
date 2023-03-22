@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import CasosDeUso.PontuadorDependentes3OuMais;
 import CasosDeUso.PontuadorDependentesEntre1E2;
-import CasosDeUso.PontuadorGeral;
+import CasosDeUso.CriterioDependentes;
 import CasosDeUso.ValidadorDeDependentes;
 import Entidades.Familia;
 import Entidades.Membro;
@@ -33,7 +33,7 @@ class TestesUnitariosDigix {
 	void testePontuadorRendaAte900Retornando5() throws ParseException {
 		Familia f1 = new Familia("a", "a");
 		f1.setRenda(899);
-		new PontuadorGeral(f1);
+		new CriterioDependentes(f1);
 		assertEquals(5, f1.getPontosRenda());
 		
 	}
@@ -42,7 +42,7 @@ class TestesUnitariosDigix {
 	void testePontuadorRendaDe901Ate1500() throws ParseException {
 		Familia f1 = new Familia("", "");
 		f1.setRenda(901);
-		new PontuadorGeral(f1);
+		new CriterioDependentes(f1);
 		assertEquals(3, f1.getPontosRenda());
 		
 	}

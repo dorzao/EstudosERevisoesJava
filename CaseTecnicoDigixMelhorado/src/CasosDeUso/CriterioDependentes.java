@@ -3,12 +3,12 @@ package CasosDeUso;
 import Entidades.Familia;
 import Entidades.Membro;
 
-public final class PontuadorGeral {
-	public PontuadorGeral (Familia familia) {
+public final class CriterioDependentes {
+	public CriterioDependentes (Familia familia) {
 		pontuar(familia);
 	}
 	
-	public PontuadorGeral() {}
+	public CriterioDependentes() {}
 	
 	public static void pontuar(Familia familia) {
 		// Aqui devem ser adicionadas novas implementações de pontuação
